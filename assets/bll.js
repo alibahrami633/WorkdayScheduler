@@ -23,13 +23,9 @@ $(document).ready(function() {
         else $("#" + element).parent().addClass("future");
     });
     
-    // storing data from textarea - tasks - to the local storage
-    values.forEach(function(btnNumber) {
-        $("#btn" + btnNumber).on("click", function() {
-            localStorage.setItem(btnNumber, $.trim($("#" + btnNumber).val()));
-        });
-    });
-
+    storeTasks();    
+    
+    // reads the local storage and initiates the task element
     function init() {
         values.forEach(function(element) {
             if($("#" + element).text() === "") {
@@ -39,8 +35,12 @@ $(document).ready(function() {
         });
     }
     
+    // storing data from textarea - tasks - to the local storage
     function storeTasks() {        
-        //localStorage.setItem("tasks", JSON.stringify(values));
+        values.forEach(function(btnNumber) {
+            $("#btn" + btnNumber).on("click", function() {
+                localStorage.setItem(btnNumber, $.trim($("#" + btnNumber).val()));
+            });
+        });
     }
-
 });
