@@ -31,9 +31,7 @@ $(document).ready(function() {
     // reads the local storage and initiates the task element
     function init() {
         values.forEach(function(element) {
-            if($("#" + element).text() === "") {
-                $("#" + element).text(localStorage.getItem(element));
-            }
+            $("#" + element).text(localStorage.getItem(element));
         });
     }
     
