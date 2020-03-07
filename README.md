@@ -38,6 +38,7 @@
     <p>
         This application does not have any database, therefore, simply download the whole folder and run it on a local computer or any server.
         The app shows different data on the task list based on the local storage of the computer which is being used.
+        If you are using Firefox browser, for clearing the text in the task fields, it is required to refresh the age using CTRL + F5 as Firefox saves the state of the input elements.
     </p>
 <hr/>
 <br>
