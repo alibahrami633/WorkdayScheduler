@@ -10,6 +10,8 @@ $(document).ready(function() {
         return $(this).children("textarea").prop("id");
     }).get();
 
+    init();
+
     // iterates through text areas and adds the relevant color
     values.forEach(function(element) {
         if(parseInt(element) < currentHour) {
@@ -21,36 +23,20 @@ $(document).ready(function() {
         else $("#" + element).parent().addClass("future");
     });
     
-
-
-    // adds fucntionality to submit buttons
+    // storing data from textarea - tasks - to the local storage
     values.forEach(function(btnNumber) {
-        // $("#btn" + btnNumber).on("click", function() {
-        //     alert($("#btn" + btnNumber).parent().siblings().find(btnNumber).text());
-        // });
         $("#btn" + btnNumber).on("click", function() {
-            var value = $.trim($("#" + btnNumber).val());
-
-            localStorage.setItem(btnNumber, value)
-            
+            localStorage.setItem(btnNumber, $.trim($("#" + btnNumber).val()));
         });
     });
 
-
-
-
     function init() {
-        // Get stored todos from localStorage
-        // Parsing the JSON string to an object
-        // var storedTodos = JSON.parse(localStorage.getItem("todos"));
-      
-        // If todos were retrieved from localStorage, update the todos array to it
-        // if (storedTodos !== null) {
-        //   todos = storedTodos;
-        // }
-      
-        // Render todos to the DOM
-        // renderTasks();
+        values.forEach(function(element) {
+            if($("#" + element).text() === "") {
+                console.log(localStorage.getItem(element));
+                $("#" + element).text(localStorage.getItem(element));
+            }
+        });
     }
     
     function storeTasks() {        
