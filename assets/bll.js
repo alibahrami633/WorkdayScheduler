@@ -1,44 +1,27 @@
 $(document).ready(function() {
     // adds the current date to the top
     $("#currentDay").text(moment().format("dddd, MMMM Do"));
-
-    // colors day rows
-    var currentHour = parseInt(moment().format("H"));
     
-    console.log(moment().format("H"));
+    // changes the color of each row based on the id number of textarea and current hour
+    var currentHour = parseInt(moment().format("H"));
 
+    // adds the id of texrareas in the container div to values array
     var values = $(".container div").map(function() {
         return $(this).children("textarea").prop("id");
     }).get();
 
+    // iterates through text areas and adds the relevant color
     values.forEach(function(element) {
         //if(element > 12) element -= 12;
         if(parseInt(element) < currentHour) {
-            $("#" + element).parent().css("background-color", "grey");
+            $("#" + element).parent().addClass("past");
         }
         else if(parseInt(element) === currentHour) {            
-            $("#" + element).parent().css("background-color", "red");
+            $("#" + element).parent().addClass("present");
         }
-        else  $("#" + element).parent().css("background-color", "green");
+        else $("#" + element).parent().addClass("future");
     });
-    //console.log(JSON.stringify(values));
-    // $(".container").each(function(){
-    //     var id = $("id")
-    // });
     
-
-    //var span = $(".container div div span");
-    
-    //console.log(span.text());
-    // $(".container").each(function() {
-    //     var id = parseInt($(this).children("div").prop("id"));
-    //     if(id < 12) {
-    //         $("#" + id).css("background-color", "red");
-    //     }
-    // });
-
-    // $("textarea").addClass("present");
-
     // submit button
     $("button").on("click", function() {
         alert("Clicked!");
