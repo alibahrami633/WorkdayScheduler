@@ -12,7 +12,6 @@ $(document).ready(function() {
 
     // iterates through text areas and adds the relevant color
     values.forEach(function(element) {
-        //if(element > 12) element -= 12;
         if(parseInt(element) < currentHour) {
             $("#" + element).parent().addClass("past");
         }
@@ -22,9 +21,40 @@ $(document).ready(function() {
         else $("#" + element).parent().addClass("future");
     });
     
-    // submit button
-    $("button").on("click", function() {
-        alert("Clicked!");
+
+
+    // adds fucntionality to submit buttons
+    values.forEach(function(btnNumber) {
+        // $("#btn" + btnNumber).on("click", function() {
+        //     alert($("#btn" + btnNumber).parent().siblings().find(btnNumber).text());
+        // });
+        $("#btn" + btnNumber).on("click", function() {
+            var value = $.trim($("#" + btnNumber).val());
+
+            localStorage.setItem(btnNumber, value)
+            
+        });
     });
+
+
+
+
+    function init() {
+        // Get stored todos from localStorage
+        // Parsing the JSON string to an object
+        // var storedTodos = JSON.parse(localStorage.getItem("todos"));
+      
+        // If todos were retrieved from localStorage, update the todos array to it
+        // if (storedTodos !== null) {
+        //   todos = storedTodos;
+        // }
+      
+        // Render todos to the DOM
+        // renderTasks();
+    }
+    
+    function storeTasks() {        
+        //localStorage.setItem("tasks", JSON.stringify(values));
+    }
 
 });
