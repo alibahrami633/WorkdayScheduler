@@ -59,11 +59,11 @@
 <hr />
 <br>
 
-<img src="https://github.com/alibahrami633/WorkdayScheduler/tree/master/assets/images/screenshot02.png" alt="deployed application image" />
+<img src="https://raw.githubusercontent.com/alibahrami633/WorkdayScheduler/master/assets/images/screenshot02.png" alt="deployed application image" />
 
 <hr />
 <br>
 
-<img src="https://github.com/alibahrami633/WorkdayScheduler/tree/master/assets/images/screenshot03.png" alt="deployed application image" />
+<img src="https://raw.githubusercontent.com/alibahrami633/WorkdayScheduler/master/assets/images/screenshot03.png" alt="deployed application image" />
 
 <hr />
