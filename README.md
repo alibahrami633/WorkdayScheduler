@@ -6,7 +6,7 @@
 <hr/>
     <p>
         This application shows the current day based on the system time. The app contains a even/task scheduler which holds a table of various rows for each daily work hours from 9AM to 5PM. 
-        Each row shows different color based on the current time of the day. The colors are divided into red for current hour, green for future hours and grey for past hours.        
+        Each row shows different color based on the current time of the day. The colors are divided into red for current hour, green for future hours and grey for past hours.          It is a front-end application the can be used as a daily task/note taker. The user can add their notes for each day of the week. The application can be extended to cover all days of a year.
     </p>
 <hr/>
 <br>
