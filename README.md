@@ -15,7 +15,7 @@
 ## Technologies
 <hr/>
     <p>
-        This application is written using HTML, CSS, JavaScript, Bootstrap, jQuery and Moment.js libraries.        
+        HTML, CSS, JavaScript, Bootstrap, jQuery and Moment.js libraries.       
     </p>
 <hr/>
 <br>
