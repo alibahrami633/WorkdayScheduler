@@ -48,7 +48,7 @@
 
 <hr/>
     <p>
-        Deployed Application:<a href="https://alibahrami633.github.io/WorkdayScheduler/" target="_blank"> https://alibahrami633.github.io/WorkdayScheduler</a>
+        Deployed Application:<a href="https://alibahrami633.github.io/WorkdayScheduler/" target="_blank"> https://alibahrami633.github.io/WorkdayScheduler </a>
     </p>
 <hr/>
 <br>
